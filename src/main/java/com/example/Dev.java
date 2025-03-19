@@ -2,15 +2,22 @@ package com.example;
 
 public class Dev {
 
-    private Laptop laptop;
+    private Computer desktop1;
 
-    public Dev(Laptop laptop) {
+    public Dev() {
         System.out.println("Dev constructor");
-        this.laptop = laptop;
+    }
+
+    public void setComputer(Computer computer) {
+        this.desktop1 = computer;
+    }
+
+    public Computer getComputer() {
+        return this.desktop1;
     }
 
     public void build() {
-        laptop.compile();
+        desktop1.compile();
         System.out.println("Build a project by using spring framework");
     }
 }

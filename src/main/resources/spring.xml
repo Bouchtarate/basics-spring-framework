@@ -1,9 +1,8 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-  <bean id="dev" class="com.example.Dev">
-    <constructor-arg ref="laptop1"/>
-    <!-- <property name="laptop" ref="laptop1"/> -->
+  <bean id="dev" class="com.example.Dev" autowire="byName">
   </bean>
-  <bean id="laptop1" class="com.example.Laptop"></bean>
+  <bean id="computer" class="com.example.Laptop"></bean>
+  <bean id="desktop1" class="com.example.Desktop"></bean>
 </beans>
